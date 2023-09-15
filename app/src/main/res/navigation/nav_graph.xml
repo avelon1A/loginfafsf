@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homefragement">
+
+    <fragment
+        android:id="@+id/chatfragement"
+        android:name="com.example.myapplication.chatfragement"
+        android:label="fragment_chatfragement"
+        tools:layout="@layout/fragment_chatfragement" >
+        <action
+            android:id="@+id/action_chatfragement_to_profile_fragment"
+            app:destination="@id/profile_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homefragement"
+        android:name="Homefragement"
+        android:label="fragment_homefragement"
+        tools:layout="@layout/fragment_homefragement" >
+        <action
+            android:id="@+id/action_homefragement_to_chatfragement"
+            app:destination="@id/chatfragement" />
+    </fragment>
+    <fragment
+        android:id="@+id/setting_fragement"
+        android:name="setting_fragement"
+        android:label="fragment_setting_fragement"
+        tools:layout="@layout/fragment_setting_fragement" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="profile_fragment"
+        android:label="fragment_profile_fragment"
+        tools:layout="@layout/fragment_profile_fragment" >
+        <action
+            android:id="@+id/action_profile_fragment_to_setting_fragement"
+            app:destination="@id/setting_fragement" />
+    </fragment>
+</navigation>
